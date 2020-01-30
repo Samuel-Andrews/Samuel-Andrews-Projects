@@ -1,3 +1,7 @@
+#This file performs all of the forecasts as shown in the powerpoint 
+
+
+
 library(fpp2)
 library(forecast)
 library(dplyr)
