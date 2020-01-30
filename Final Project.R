@@ -1,3 +1,11 @@
+#This script contains all of the logic nessescary to complete an unsupervised learning analysis of the Kaggle
+# 2019 ML & DS survey challenge. It also produces the output used in the accompanying powerpoint
+#  (Kaggle_2019_presentation_Samuel_Andrews), including a PCA of numeric converted variables, an MCA of categorical data,
+#  association rules for text response, and sentiement analysis. A number of .csv files were created in openrefine
+#  prior that are used here and included within this branch, as certain steps required the response to be formatted in 
+#  particular ways. A full write up of everything done here is also found within this branch as
+#  "Kaggle_2019_write_up_Complete_Samuel_Andrews"
+
 
 require(proxy)
 require(cab)
@@ -312,7 +320,7 @@ CleanCorpus = function(tweets) {
 
 
 
-q14corpus = CleanCorpus(q14$ï..Q14_full_text)
+q14corpus = CleanCorpus(q14$Ã¯..Q14_full_text)
 
 q14tdm = TermDocumentMatrix(q14corpus)
 
@@ -452,7 +460,7 @@ CleanCorpus = function(tweets) {
   return(tweetCorpus)
 }
 
-sentcorpus = CleanCorpus(sent$ï..Full_Other_Text_12_13_19_5_9)
+sentcorpus = CleanCorpus(sent$Ã¯..Full_Other_Text_12_13_19_5_9)
 
 sentTDM = TermDocumentMatrix(sentcorpus)
 
@@ -470,7 +478,7 @@ wordcloud(words = names(sent.wfreq), freq = sent.wfreq, random.order = F, col = 
 
 wordcloud(words = names(sent.wfreq), freq = sent.wfreq, random.order = F, col = rainbow(20), min.freq = 20)
 
-temp = sent$ï..Full_Other_Text_12_13_19_5_9
+temp = sent$Ã¯..Full_Other_Text_12_13_19_5_9
 
 temp = str_replace_all(temp,"&amp", replacement = "and")
 
