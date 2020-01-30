@@ -1,4 +1,6 @@
-#This file performs all of the forecasts as shown in the powerpoint 
+#This file performs all of the forecasts as shown in the powerpoint "Forecasting_price_Tin_vehicles".
+# The entire process going through this section by section is contained "Forecasting_Methods_Write_up"
+# This project was originally done as the final project for FIN 335 Forecasting Methods
 
 
 
